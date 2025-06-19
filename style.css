@@ -1,0 +1,99 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures full height of the viewport */
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Light Theme */
+  body.light {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  /* Dark Theme */
+  body.dark {
+    background-color: #333;
+    color: #f0f0f0;
+  }
+  
+  /* Clock Container */
+  .container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+  }
+  
+  .container:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Clock */
+  #clock {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  
+  /* Controls */
+  .controls button {
+    margin: 10px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .controls button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+  }
+  
+  /* Dark Theme Button Styling */
+  body.dark .controls button {
+    background-color: #555;
+    color: #f0f0f0;
+  }
+  
+  body.dark .controls button:hover {
+    background-color: #222;
+  }
+  
+  /* Responsive Font Size */
+  @media (max-width: 768px) {
+    #clock {
+      font-size: 2.5rem;
+    }
+  
+    .controls button {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #clock {
+      font-size: 2rem;
+    }
+  
+    .controls button {
+      font-size: 0.8rem;
+      padding: 8px 12px;
+    }
+  }
+  
